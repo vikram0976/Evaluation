@@ -12,14 +12,16 @@
       }
       #banner {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
         background-color: blue;
         color: white;
         height: 200px;
-        width: 80%;
+        width: 65%;
         margin: auto;
         border-radius: 20px;
+        padding-left: 40px;
+        
 
       }
       #banner >button {
@@ -36,7 +38,7 @@
         grid-template-columns: repeat(6,1fr);
         grid-template-rows: repeat(1,60px);
         gap: 20px;
-        width: 80%;
+        width: 70%;
         margin: auto;
         justify-content: center;
         margin-top: 20px;
@@ -53,7 +55,7 @@
         text-align: center;
       }
       #works {
-        margin-top: 220px;
+        margin-top: 200px;
     
       }
       #works > div {
@@ -61,13 +63,16 @@
         display: grid;
         grid-template-columns: repeat(4,1fr);
         grid-template-rows: repeat(2,100px);
+        gap: 20px;
         height: 60px;
-        width: 78%;
+        width: 70%;
         margin: auto;
+        
         
       }
       #works >div >div {
         padding: 10px;
+      
       }
       #works > div > div >img {
         width: 100%;
@@ -77,12 +82,62 @@
 
 
 
+
       /* Medium Screen */
       @media only screen and (min-width: 500px) and (max-width: 768px) {
+        #banner {
+          flex-direction: column;
+          justify-content: space-between;
+        align-items: center;
+      
+        height: 290px;
+        width: 65%;
+        margin: auto;
+        margin-bottom: -30px;
+        }
+
+        #services {
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(2,150px);
+        width: 70%;
+      
+        }
+        #services >div {
+          margin-top: 60px;
+        }
+
+        #works > div {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(4,100px);
+      }
+      #works {
+        margin-top:60px;
+      }
       }
 
       /* Small Screen */
       @media only screen and (min-width: 320px) and (max-width: 499px) {
+        #banner {
+          flex-direction: column;
+          height: 350px;
+        margin-bottom: 10px; 
+        }
+
+        #services {
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(3,160px);
+        gap: 15px;
+        }
+
+        #works > div {
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: repeat(8,100px);
+      }
+      #works {
+        margin-top:30px;
+      }
       }
     </style>
   </head>
